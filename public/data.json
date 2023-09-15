@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "img": "https://i.ibb.co/mvPk0Tq/Rectangle-2-2.png",
+    "course_name": "Introduction to Programming",
+    "description": "A beginner's guide to programming with hands-on examples.",
+    "price": 15000,
+    "credit": 1
+  },
+  {
+    "id": 2,
+    "img": "https://i.ibb.co/PCkx57n/Rectangle-2-3.png",
+    "course_name": "Web Development Fundamentals",
+    "description": "Learn the essentials of web development including HTML, CSS, and JavaScript.",
+    "price": 25000,
+    "credit": 2
+  },
+  {
+    "id": 3,
+    "img": "https://i.ibb.co/fMTcqmR/Rectangle-2-4.png",
+    "course_name": "Advanced JavaScript Programming",
+    "description": "Discover the world of data Advanced JavaScript Programming.",
+    "price": 10000,
+    "credit": 10
+  },
+  {
+    "id": 4,
+    "img": "https://i.ibb.co/rxVVww3/Rectangle-3.png",
+    "course_name": "Graphic Design Basics",
+    "description": "Get started with graphic design and create stunning visuals.",
+    "price": 35000,
+    "credit": 5
+  },
+  {
+    "id": 5,
+    "img": "https://i.ibb.co/C7swqfQ/Rectangle-2.png",
+    "course_name": "Business Finance Principles",
+    "description": "Learn financial management and investment strategies.",
+    "price": 19000,
+    "credit": 5
+  },
+  {
+    "id": 6,
+    "img": "https://i.ibb.co/zrwf4qw/Rectangle-2-5.png",
+    "course_name": "Advanced JavaScript Programming",
+    "description": "Master advanced JavaScript concepts and build dynamic web applications.",
+    "price": 23000,
+    "credit": 2
+  },
+  {
+    "id": 7,
+    "img": "https://i.ibb.co/1qRnmCs/Rectangle-3-1.png",
+    "course_name": "Artificial Intelligence Fundamentals",
+    "description": "Explore the fundamentals of Artificial Intelligence Fundamentals.",
+    "price": 35000,
+    "credit": 5
+  },
+  {
+    "id": 8,
+    "img": "https://i.ibb.co/jTzbcSg/Rectangle-2-1.png",
+    "course_name": "Digital Marketing Strategies",
+    "description": "Learn effective digital marketing techniques for businesses.",
+    "price": 19000,
+    "credit": 5
+  },
+  {
+    "id": 9,
+    "img": "https://i.ibb.co/W2gZbmr/Rectangle-2-6.png",
+    "course_name": "Effective Communication Skills",
+    "description": "Enhance your communication skills for personal and professional success.",
+    "price": 23000,
+    "credit": 2
+  }
+]
