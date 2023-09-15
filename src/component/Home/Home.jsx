@@ -5,6 +5,7 @@ import Card from '../Card/Card';
 const Home = () => {
   const [allCourse, setAllCourse] = useState([]);
   const [selectedCourses, setSelectedCourses] = useState([]);
+  const [remainingCreadit, setRemainingCreadit] = useState(20);
   // console.log(selectedCourses);
 
   useEffect(() => {
@@ -12,12 +13,17 @@ const Home = () => {
       .then((res) => res.json())
       .then((data) => setAllCourse(data));
   });
+
   const handleSelectCourse = (course) => {
+    const newRemaining = remainingCreadit - course.credit;
+
     const isExist = selectedCourses.find((item) => item.id == course.id);
+
     if (isExist) {
       alert('Already join this course!!');
     } else {
       setSelectedCourses([...selectedCourses, course]);
+      setRemainingCreadit(newRemaining);
     }
 
     // console.log(selectedCourses);
@@ -53,7 +59,7 @@ const Home = () => {
                   <div className="">
                     <img src="" alt="" />
                     <p className="text-xs text-[#1C1B1B99] font-medium">
-                      Credit:{course.Credit}h
+                      credit:{course.credit}h
                     </p>
                   </div>
                 </div>
@@ -69,7 +75,10 @@ const Home = () => {
         </div>
       </div>
       <div className="w-1/3 mt-28 bg-slate-400">
-        <Card selectedCourses={selectedCourses} />
+        <Card
+          remainingCreadit={remainingCreadit}
+          selectedCourses={selectedCourses}
+        />
       </div>
     </div>
   );
