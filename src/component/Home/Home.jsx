@@ -1,12 +1,19 @@
 /* eslint-disable react/jsx-key */
+import remainingSound from '../../assets/sound/remaining-alert-126515.mp3';
+import existSound from '../../assets/sound/exist.wav';
+import successSound from '../../assets/sound/success.mp3';
 import { FiDollarSign } from 'react-icons/fi';
 import { HiOutlineBookOpen } from 'react-icons/hi';
 import { useEffect, useState } from 'react';
 import Card from '../Card/Card';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { data } from 'autoprefixer';
 
 const Home = () => {
+  const alertSound = (data) => {
+    new Audio(data).play();
+  };
   const [allCourse, setAllCourse] = useState([]);
 
   const [selectedCourses, setSelectedCourses] = useState([]);
@@ -37,10 +44,12 @@ const Home = () => {
     const isExist = selectedCourses.find((item) => item.id == course.id);
     let newRemainingTotalCreaditHours = 0;
     if (remainingCreadit < course.credit) {
+      alertSound(remainingSound);
       return toast.warning('You have not supetient creadit');
     }
 
     if (isExist) {
+      alertSound(existSound);
       toast.warn('Course already added');
     } else {
       toast.success('Successfully course added');
@@ -49,6 +58,7 @@ const Home = () => {
       setRemainingCreadit(newRemaining);
       setTotalPrice(newTotalPrice);
       setTotalCradit(newTotalCreadit);
+      alertSound(successSound);
     }
   };
 
